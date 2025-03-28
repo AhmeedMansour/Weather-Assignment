@@ -1,97 +1,120 @@
-body{
+body {
     box-sizing: border-box;
     background: #1e202b;
     font-family: "Roboto", "Open Sans", sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 1.5;
+    margin: 0;
 }
+
+/* Make container responsive */
 .container {
-    width: 1120px;
+    width: 100%;
+    max-width: 1120px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.navbar{
+
+.navbar {
     background-color: #1E202B;
 }
+
 .navbar-toggler {
     background: #1E202B;
-    border: 2px solid transparent; 
-    color: white; 
-    padding: 10px; 
+    border: 2px solid transparent;
+    color: white;
+    padding: 10px;
     border-radius: 40px;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
-
-.navbar-toggler:hover, .navbar-toggler:focus {
-    border: 2px solid #009ad8; 
-    outline: none; 
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    border: 2px solid #009ad8;
+    outline: none;
 }
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.navbar-brand img{
-    width: 30%;
+.navbar-brand img {
+    max-width: 30%;
+    height: auto;
 }
-.nav-link{
+
+.nav-link {
     color: white !important;
     font-weight: 400;
 }
-.detail_logo h1{
+
+.detail_logo h1 {
     font-size: 16px;
     font-weight: 700;
 }
-.detail_logo p{
+
+.detail_logo p {
     font-size: 10px;
     font-weight: 300;
 }
-.nav-link.active{
+
+.nav-link.active {
     border: 2px solid #009ad8;
     border-radius: 30px;
-    color: #009ad8  !important;
+    color: #009ad8 !important;
     padding: 5px 25px !important;
 }
-.menue_item .nav-link{
+
+.menue_item .nav-link {
     border: 2px solid transparent;
     border-radius: 30px;
     padding: 5px 25px !important;
-    transition: border ,color 0.5s ease;
-}
-.menue_item .nav-link:hover{
-    color: #009ad8  !important;
-    border-color:#009ad8 ;
+    transition: border, color 0.5s ease;
 }
 
-/*end navbar  */
+.menue_item .nav-link:hover {
+    color: #009ad8 !important;
+    border-color: #009ad8;
+}
 
-/*  hero */
-.hero{
+/* Hero */
+.hero {
     background-image: url(../images/banner.png);
     background-position: center;
     background-size: cover;
     padding: 70px 0;
-    height: 50vh;
+    min-height: 50vh;
     position: relative;
 }
-.find_location{
-position: relative;
-z-index: 9999;
+
+.find_location {
+    position: relative;
+    z-index: 9999;
+    max-width: 500px;
+    margin: 0 auto;
 }
-.form-control:focus{
-    box-shadow:none;
+
+.form-control:focus {
+    box-shadow: none;
     border-color: unset;
 }
-.form-control{
+
+.form-control {
     border: none;
 }
-.find_location input[type='text']{
-    padding: 15px ;
+
+.find_location input[type='text'] {
+    padding: 15px;
     background: #1e202b;
     color: white;
     border-radius: 30px;
+    width: 100%;
 }
-.find_location input[type='button']{
+
+.find_location input[type='button'] {
     position: absolute;
     top: 5px;
     right: 8px;
@@ -102,102 +125,127 @@ z-index: 9999;
     background: #009ad8;
     border: none;
 }
-.btn-info:focus{
+
+.btn-info:focus {
     box-shadow: none;
     border: none !important;
 }
-/*  end hero */
 
-/* table */
-
-.weather-table{
-    height: 50vh;
+/* Weather Table */
+.weather-table {
+    min-height: 50vh; /* Allows growth */
+    position: relative;
+    margin-top: 20px; /* Lifts the cards up; adjust value as needed */
+    z-index: 2;
 }
-.weather-table .container{
+
+/* Original absolute positioning for larger screens */
+.weather-table .container {
     left: 50%;
-    top:0%;
-    transform: translate(-50%,-50%);
+    top: 0%;
+    transform: translate(-50%, -50%);
     z-index: 999;
+}
 
+.today_weather .today_header {
+    border-top-left-radius: 10px;
+    border-bottom: 2px solid #009ad8;
 }
-.today_weather .today_header{
-    border-top-left-radius:10px;
-    border-bottom:2px solid #009ad8;
-}
-.today_header{
+
+.today_header {
     background: #2D303D;
     color: #bfc1c8;
     font-weight: 400;
-    padding: 10px ;
+    padding: 10px;
 }
-.today_weather .content_today{
-    border-bottom-left-radius:10px;
+
+.today_weather .content_today {
+    border-bottom-left-radius: 10px;
 }
-.today_weather .content_today{
+
+.today_weather .content_today {
     background-color: #323544;
     padding: 50px 20px;
-    
 }
-.today_weather  span{
+
+.today_weather span {
     color: #bfc1c8;
 }
-.today_weather  span img{
-    width:5%;
+
+.today_weather span img {
+    width: 5%;
 }
-.location{
+
+.location {
     font-weight: 400;
     font-size: 18px;
     color: #bfc1c8;
 }
-.num{
+
+.num {
     font-weight: 700;
-    font-size: 75px; 
+    font-size: 75px;
 }
+
 .custom {
     color: #009ad8;
     margin: 20px 0;
     font-weight: 400;
     font-size: 15px;
 }
-.second_today .degree .num{
+
+.second_today .degree .num {
     font-size: 24px;
 }
-.second_today .today_header{
+
+.second_today .today_header {
     background-color: #222531;
-    border-bottom:2px solid #009ad8;
+    border-bottom: 2px solid #009ad8;
 }
-.second_today .content_today{
-    padding-top:50px ;
-    padding-bottom:58px ;
+
+.second_today .content_today {
+    padding-top: 50px;
+    padding-bottom: 58px;
     background-color: #262936;
 }
-.third_today .degree .num{
+
+.third_today .degree .num {
     font-size: 24px;
 }
-.third_today .today_header{
-    border-top-right-radius:10px;
-    border-bottom:2px solid #009ad8;
 
+.third_today .today_header {
+    border-top-right-radius: 10px;
+    border-bottom: 2px solid #009ad8;
 }
-.third_today .content_today{
-    padding-top:50px ;
-    padding-bottom:58px ;
-    border-bottom-right-radius:10px;
+
+.third_today .content_today {
+    padding-top: 50px;
+    padding-bottom: 58px;
+    border-bottom-right-radius: 10px;
     background-color: #323544;
 }
-/* end table */
 
-/* footer */
-footer{
+/* Footer */
+footer {
     background-color: #323544;
+    position: relative;
 }
-.subscripe input[type='text']{
-    padding: 15px ;
+
+.subscripe {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.subscripe input[type='text'] {
+    padding: 15px;
     background: #1e202b;
     color: white;
     border-radius: 30px;
+    width: 100%;
 }
-.subscripe input[type='button']{
+
+.subscripe input[type='button'] {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -208,22 +256,23 @@ footer{
     background: #009ad8;
     border: none;
 }
+
 .circle_icon {
-    display: inline-flex; 
+    display: inline-flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     width: 40px;
-    height: 40px; 
-    border-radius: 50%; 
+    height: 40px;
+    border-radius: 50%;
     background-color: #1E202B;
     margin: 0 5px;
     transition: all 0.3s ease;
 }
 
 .circle_icon a {
-    color: #009ad8; 
+    color: #009ad8;
     text-decoration: none;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -235,73 +284,85 @@ footer{
 }
 
 .circle_icon:hover {
-    background-color: #009ad8; 
+    background-color: #009ad8;
 }
 
 .circle_icon:hover i {
     color: white;
 }
 
-footer p{
+footer p {
     color: RGB(191, 193, 200);
 }
-/*  end footer */
-@media (max-width: 992px){
-    .num{
-        font-size: 50px; 
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .num {
+        font-size: 50px !important;
     }
-    .weather-table .container{
-        top:70%;
+    /* .num2{
+        font-size: 50px !important;
+    } */
+    /* Override container positioning on medium screens */
+    .weather-table .container {
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        position: relative !important;
     }
-    footer{
-        transform: translateY(200%);   
-    }
-}
-@media (max-width: 990px) {
-    .num{
-        font-size: 50px; 
-    }
-    .weather-table .container{
-        top:100%;
-    }
-    footer{
-        transform: translateY(250%);   
-    }
-}
-@media (max-width: 768px){
-    .num{
-        font-size: 20px; 
-    }
-    .weather-table .container{
-        top:90%;
-    }
-    footer{
-        transform: translateY(200%);   
-    }
-}
-@media (max-width: 768px) {
-    .num{
-        font-size: 50px; 
-    }
-    .weather-table .container{
-        top:100%;
-    }
-    footer{
-        transform: translateY(250%);   
+    .weather-table {
+        min-height: auto; /* Remove fixed height */
+        padding: 2rem;
+        margin-top: -450px; /* Adjusted for medium screens; tweak if needed */
     }
 }
 
-@media (max-width: 576px){
-    .subscripe input[type='button']{
-        padding: 0 10px;
+@media (max-width: 768px) {
+    .num {
+        font-size: 50px !important;
     }
-    .subscripe input[type='text']{
+    .weather-table {
+        min-height: auto; /* Remove fixed height */
+        padding: 2rem;
+        margin-top: -350px; /* Adjusted for medium screens; tweak if needed */
+    }
+    /* Override absolute positioning set in HTML using !important */
+    .weather-table .container {
+        position: static !important;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
+    }
+    .navbar-brand img {
+        max-width: 20%;
+    }
+    footer {
+        margin-top: 2rem; /* Add spacing above footer */
+    }
+}
+
+@media (max-width: 576px) {
+    .num {
+        font-size: 30px !important;
+    }
+    .subscripe input[type='button'],
+    .find_location input[type='button'] {
+        padding: 0 20px;
+    }
+    .subscripe input[type='text'],
+    .find_location input[type='text'] {
         font-size: 12px;
     }
-    .weather-table .container{
-        top:100%;
+    .detail_logo h1 {
+        font-size: 14px;
     }
-    footer{
-        transform: translateY(200%);   
+    .detail_logo p {
+        font-size: 8px;
+    }
+    .weather-table {
+        min-height: 100vh; /* Allows growth */
+        position: relative;
+        margin-top: -350px; /* Lifts the cards up; adjust value as needed */
+        z-index: 2;
     }
 }

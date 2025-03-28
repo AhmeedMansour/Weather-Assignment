@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>Weather</title>
-	<link rel="icon" href="images/770b805d5c99c7931366c2e84e88f251.jpg">
+    <link rel="icon" href="images/770b805d5c99c7931366c2e84e88f251.jpg">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg p-3">
         <div class="container">
-            <a class="navbar-brand text-white d-flex justify-content-center align-items-center" href="#" >
-                <img src="./images/logo@2x.png" alt="" class="logoImg me-2">
-                <div class="detail_logo mt-4 ps-3">
+            <a class="navbar-brand text-white d-flex align-items-center" href="#">
+                <img src="./images/logo@2x.png" alt="Weather Logo" class="logoImg me-2">
+                <div class="detail_logo ps-3">
                     <h1>Weather</h1>
-                    <p> tagline goes here</p>
+                    <p>tagline goes here</p>
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -27,21 +27,21 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 ms-auto  mb-lg-0 ">
-                    <li class="nav-item  ">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item ms-2 menue_item">
+                    <li class="nav-item menue_item ms-2">
                         <a class="nav-link" href="#">News</a>
                     </li>
-                    <li class="nav-item me-2 menue_item">
+                    <li class="nav-item menue_item ms-2">
                         <a class="nav-link" href="#">Live cameras</a>
                     </li>
-                    <li class="nav-item me-2 menue_item">
+                    <li class="nav-item menue_item ms-2">
                         <a class="nav-link" href="#">Photos</a>
                     </li>
-                    <li class="nav-item me-2 menue_item">
+                    <li class="nav-item menue_item ms-2">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
@@ -49,43 +49,38 @@
         </div>
     </nav>
 
-
-    <div class="hero ">
+    <div class="hero">
         <div class="container">
-            <form class="find_location">
+            <form class="find_location position-relative">
                 <input type="text" class="form-control" placeholder="Find your location..." id="search">
-                <input type="button" value="Find" id="submit" class="btn-info">
+                <input type="button" value="Find" id="submit" class="btn btn-info">
             </form>
         </div>
-    
     </div>
-        
-            <div class="weather-table p-5 position-relative">
-                <div class="container position-absolute">
-                    <div class="row g-0" id="weather">
-                        
-                    </div>
-                    
-                </div>
-            </div>
 
-    <footer class="p-5" >
+    <div class="weather-table p-5 position-relative">
+        <div class="container position-absolute">
+            <div class="row g-3" id="weather">
+                <!-- Weather data will be injected here by JS -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="p-5">
         <div class="container">
             <div class="row mb-4">
-                <div class=" col-md-12 col-lg-7">
-                    <div class="input_end ">
-                        <form class="subscripe position-relative">
-                            <input type="text" class="form-control" placeholder="Enter your Email Subscripe..." id="subscripe">
-                            <input type="button" value="Subscripe" id="submit" class="btn-info">
-                        </form>
-                    </div>
+                <div class="col-12 col-lg-7 mb-3 mb-lg-0">
+                    <form class="subscripe position-relative">
+                        <input type="text" class="form-control" placeholder="Enter your Email Subscripe..." id="subscripe">
+                        <input type="button" value="Subscripe" id="submit" class="btn btn-info">
+                    </form>
                 </div>
-                <div class=" col-md-12 offset-1 col-lg-4">
-                    <div class="icon-end mt-2">
-                        <span class="circle_icon"><a href="" ><i class="fa-brands fa-facebook fa-xl"></i></a></span>  
-                        <span class="circle_icon"><a href="" ><i class="fa-brands fa-twitter fa-xl"></i></a></span>
-                        <span class="circle_icon"><a href="" ><i class="fa-brands fa-google-plus-g fa-xl"></i></a></span>
-                        <span class="circle_icon"><a href="" ><i class="fa-brands fa-pinterest fa-xl"></i></a></span>
+                <div class="col-12 col-lg-4 text-center text-lg-end">
+                    <div class="icon-end">
+                        <span class="circle_icon"><a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a></span>
+                        <span class="circle_icon"><a href="#"><i class="fa-brands fa-twitter fa-xl"></i></a></span>
+                        <span class="circle_icon"><a href="#"><i class="fa-brands fa-google-plus-g fa-xl"></i></a></span>
+                        <span class="circle_icon"><a href="#"><i class="fa-brands fa-pinterest fa-xl"></i></a></span>
                     </div>
                 </div>
             </div>
@@ -94,6 +89,7 @@
             </div>
         </div>
     </footer>
+
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>

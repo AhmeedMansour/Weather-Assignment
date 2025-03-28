@@ -126,7 +126,7 @@ function createWeatherTemplate() {
             <img src="https:${arrWeather.forecastData[2].day.condition.icon}" alt="${arrWeather.forecastData[2].day.condition.text}" class="mt-3">
           </div>
           <div class="degree d-flex flex-column align-items-center justify-content-center">
-            <div class="num">
+            <div class="num num2">
               ${arrWeather.forecastData[2].day.maxtemp_c}<sup>o</sup>C
             </div>
             <p>
